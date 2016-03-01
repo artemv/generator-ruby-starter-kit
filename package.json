@@ -1,8 +1,8 @@
 {
   "name": "generator-ruby-starter-kit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Yeoman generator for Ruby app boilerplate based on Ruby Starter Kit (Bundler, Guard, ActiveSupport Logger, Rubocop, RSpec, WebMock, Travis, CodeClimate).",
-  "homepage": "https://github.com/artemv/ruby-starter-kit",
+  "homepage": "https://github.com/artemv/generator-ruby-starter-kit",
   "author": {
     "name": "Artem Vasiliev",
     "email": "artem.job@gmail.com",
@@ -19,7 +19,7 @@
     "rspec",
     "yeoman-generator"
   ],
-  "repository": "https://github.com/artemv/ruby-starter-kit/tree/yeoman-generator",
+  "repository": "https://github.com/artemv/generator-ruby-starter-kit",
   "dependencies": {
     "chalk": "^1.1.1",
     "glob": "^5.0.14",
