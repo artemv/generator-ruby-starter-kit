@@ -1,6 +1,5 @@
 {
   "name": "generator-ruby-starter-kit",
-  "version": "0.0.5",
   "description": "Yeoman generator for Ruby app boilerplate based on Ruby Starter Kit (Bundler, Guard, ActiveSupport Logger, Rubocop, RSpec, WebMock, Travis, CodeClimate).",
   "homepage": "https://github.com/artemv/generator-ruby-starter-kit",
   "author": {
@@ -19,7 +18,10 @@
     "rspec",
     "yeoman-generator"
   ],
-  "repository": "https://github.com/artemv/generator-ruby-starter-kit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artemv/generator-ruby-starter-kit.git"
+  },
   "dependencies": {
     "chalk": "^1.1.1",
     "glob": "^7.0.0",
@@ -28,10 +30,12 @@
     "yosay": "^1.0.5"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "semantic-release": "^4.3.5"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "license": "MIT"
 }
