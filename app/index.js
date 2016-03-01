@@ -40,8 +40,8 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    this.runInstall('gem', 'bundler');
-    this.runInstall('bundle');
+    this.runInstall('rvm use 2.3.0 && gem', 'bundler');
+    this.runInstall('rvm use 2.3.0 && bundle');
   }
 
 });
