@@ -29,4 +29,3 @@ guard
 ```
 It will run rubocop on start, will run rubocop inspections on changed files and will re-run all RSpecs and rubocop
 inspections if you hit Enter in guard window.
-
