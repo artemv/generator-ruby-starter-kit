@@ -30,7 +30,7 @@
     "yosay": "^1.0.5"
   },
   "devDependencies": {
-    "mocha": "*",
+    "mocha": "^2.4.5",
     "semantic-release": "^4.3.5"
   },
   "scripts": {
