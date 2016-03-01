@@ -40,7 +40,6 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    this.npmInstall();
     this.runInstall('gem', 'bundler');
     this.runInstall('bundle');
   }
