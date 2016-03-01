@@ -6,15 +6,16 @@ A [Yeoman](http://yeoman.io/) generator for Ruby app boilerplate based on [Ruby 
 
 ### Installation
 
-Install Ruby 2.3.0 from https://www.ruby-lang.org/en/downloads/ or via RVM (https://rvm.io/).
-
-Install `yo` and this generator globally.
-
-`npm install -g yo generator-ruby-starter-kit`
-
-### Using Yeoman
-
-Navigate to the directory you'd like to use for your project, then run `yo ruby-starter-kit`.
+* Install Ruby 2.3.0 from https://www.ruby-lang.org/en/downloads/ or via RVM (https://rvm.io/).
+* Install `yo` and this generator globally:
+```
+npm install -g yo generator-ruby-starter-kit
+```
+* Navigate to the directory you'd like to use for your project and run the generator:
+```
+cd my-app
+yo ruby-starter-kit
+```
 
 ### Basic Guide
 
