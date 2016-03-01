@@ -10,6 +10,7 @@ module.exports = yeoman.Base.extend({
 
   initializing: function () {
     this.sourceRoot(path.join(this.sourceRoot(), '../../ruby-starter-kit'));
+    this.detectRvm();
   },
 
   prompting: function () {
@@ -39,9 +40,22 @@ module.exports = yeoman.Base.extend({
     }.bind(this));
   },
 
+  detectRvm: function () {
+    var spawn = require('child_process').spawn;
+    var me = this;
+    me.rvmMode = true;
+    var rvm = spawn('rvm', ['--version']);
+
+    rvm.on('error', function () {
+      me.rvmMode = false;
+      console.log('Failed to start rvm.');
+    });
+  },
+
   install: function () {
-    this.runInstall('rvm use 2.3.0 && gem', 'bundler');
-    this.runInstall('rvm use 2.3.0 && bundle');
+    var prefix = (this.rvmMode ? 'rvm use `cat .ruby-version` && ' : '');
+    this.runInstall(prefix + 'gem', 'bundler');
+    this.runInstall(prefix + 'bundle');
   }
 
 });
