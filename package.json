@@ -23,15 +23,16 @@
     "url": "git+https://github.com/artemv/generator-ruby-starter-kit.git"
   },
   "dependencies": {
-    "chalk": "^1.1.1",
-    "glob": "^7.0.0",
-    "gulp-run": "*",
-    "yeoman-generator": "^0.22.5",
-    "yosay": "^1.0.5"
+    "chalk": "1.1.1",
+    "glob": "7.0.0",
+    "yeoman-generator": "0.22.5",
+    "yeoman-assert": "2.1.1",
+    "yeoman-test": "1.0.0",
+    "yosay": "1.0.5"
   },
   "devDependencies": {
-    "mocha": "^2.4.5",
-    "semantic-release": "^4.3.5"
+    "mocha": "2.4.5",
+    "semantic-release": "4.3.5"
   },
   "scripts": {
     "test": "mocha",
