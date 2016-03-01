@@ -20,7 +20,7 @@ Navigate to the directory you'd like to use for your project, then run `yo ruby-
 
 Run the app entry point script:
 ```
-bin/app.rb
+repo=octokit.py bin/app.rb
 ```
 
 Run the guard dev env tool:
