@@ -22,9 +22,9 @@
   "repository": "https://github.com/artemv/generator-ruby-starter-kit",
   "dependencies": {
     "chalk": "^1.1.1",
-    "glob": "^5.0.14",
+    "glob": "^7.0.0",
     "gulp-run": "*",
-    "yeoman-generator": "^0.20.3",
+    "yeoman-generator": "^0.22.5",
     "yosay": "^1.0.5"
   },
   "devDependencies": {
