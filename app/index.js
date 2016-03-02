@@ -54,8 +54,13 @@ module.exports = yeoman.Base.extend({
 
   install: function () {
     var prefix = (this.rvmMode ? 'rvm use `cat .ruby-version` && ' : '');
+    this.log('Installing bundler gem..');
     this.runInstall(prefix + 'gem', 'bundler');
+    this.log("Installing dependent gems with 'bundle install'..");
     this.runInstall(prefix + 'bundle');
-  }
+  },
 
+  end: function () {
+    this.log("That's it. Happy hacking!");
+  }
 });
