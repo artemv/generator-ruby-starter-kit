@@ -35,7 +35,7 @@
     "semantic-release": "4.3.5"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --timeout 10000",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "license": "MIT"
