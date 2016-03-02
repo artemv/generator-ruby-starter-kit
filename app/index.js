@@ -10,7 +10,6 @@ module.exports = yeoman.Base.extend({
 
   initializing: function () {
     this.sourceRoot(path.join(this.sourceRoot(), '../../ruby-starter-kit'));
-    this.detectRvm();
   },
 
   prompting: function () {
@@ -28,8 +27,8 @@ module.exports = yeoman.Base.extend({
       }
       files.forEach(function (file) {
         var dest = file;
-        if (file === 'npmignore') {
-          dest = '.' + file;
+        if (file === '.npmignore') {
+          dest = '.gitignore';
         }
         this.fs.copy(
             this.templatePath(file),
@@ -48,7 +47,6 @@ module.exports = yeoman.Base.extend({
 
     rvm.on('error', function () {
       me.rvmMode = false;
-      console.log('Failed to start rvm.');
     });
   },
 
@@ -58,9 +56,6 @@ module.exports = yeoman.Base.extend({
     this.runInstall(prefix + 'gem', 'bundler');
     this.log("Installing dependent gems with 'bundle install'..");
     this.runInstall(prefix + 'bundle');
-  },
-
-  end: function () {
-    this.log("That's it. Happy hacking!");
+    this.log(yosay("That's it. Happy hacking!"));
   }
 });
