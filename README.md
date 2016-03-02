@@ -1,6 +1,7 @@
 # generator-ruby-starter-kit
 [![Travis build status](http://img.shields.io/travis/artemv/generator-ruby-starter-kit.svg?style=flat)](https://travis-ci.org/artemv/generator-ruby-starter-kit)
 [![Dependency Status](https://david-dm.org/artemv/generator-ruby-starter-kit.svg)](https://david-dm.org/artemv/generator-ruby-starter-kit)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 A [Yeoman](http://yeoman.io/) generator for Ruby app boilerplate based on [Ruby Starter Kit](https://github.com/artemv/ruby-starter-kit) (Bundler, Guard, ActiveSupport Logger, Rubocop, RSpec, WebMock, Travis, CodeClimate)
 
