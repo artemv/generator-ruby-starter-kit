@@ -39,23 +39,72 @@ module.exports = yeoman.Base.extend({
     }.bind(this));
   },
 
-  detectRvm: function () {
-    var spawn = require('child_process').spawn;
-    var me = this;
-    me.rvmMode = true;
-    var rvm = spawn('rvm', ['--version']);
-
-    rvm.on('error', function () {
-      me.rvmMode = false;
-    });
+  detectFeature: function (testCommand) {
+    if (!testCommand) return;
+    var result = this.spawnCommandSync(testCommand, ['--version'], {stdio: 'ignore'});
+    return !result.error;
   },
 
-  install: function () {
-    var prefix = (this.rvmMode ? 'rvm use `cat .ruby-version` && ' : '');
+  _promptUserWithGitInit: function() {
+    var done = this.async();
+    this.prompt({
+      type: 'confirm',
+      name: 'initGit',
+      message: 'Initialize Git repo?',
+      default: true
+    }, function (answers) {
+      if (answers.initGit) {
+        this.log("Initializing Git repo..");
+        this.spawnCommandSync('git', ['init']);
+      }
+  //    this._sayGoodbye();
+      done();
+    }.bind(this));
+  },
+
+  _showRvmInstructions: function () {
+    this.log("You are using RVM. Please run these commands manually after this installation is complete:");
+    this.log();
+    this.log("rvm use `cat .ruby-version`");
+    this.log("gem install bundler");
+    this.log("bundle install");
+    this.log();
+  },
+
+  _installGems: function () {
     this.log('Installing bundler gem..');
-    this.runInstall(prefix + 'gem', 'bundler');
+    this.spawnCommandSync('gem', ['install', 'bundler']);
     this.log("Installing dependent gems with 'bundle install'..");
-    this.runInstall(prefix + 'bundle');
-    this.log(yosay("That's it. Happy hacking!"));
+    this.spawnCommandSync('bundle', ['install']);
+  },
+
+  install: {
+
+    bundle: function() {
+      if (this.detectFeature('rvm')) {
+        this._showRvmInstructions();
+      } else {
+        this._installGems();
+      }
+    },
+
+    gitInit: function() {
+      if (this.detectFeature('git')) {
+        var fs = require('fs');
+        fs.exists('.git', function (exists) {
+          if (!exists) {
+            this._promptUserWithGitInit()
+          } else {
+            this._sayGoodbye();
+          }
+        }.bind(this));
+      } else {
+        this._sayGoodbye();
+      }
+    }
+  },
+
+  _sayGoodbye: function() {
+    this.log(yosay("That's it. " + chalk.green("Happy hacking!")));
   }
 });
