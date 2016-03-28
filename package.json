@@ -23,7 +23,7 @@
     "url": "git+https://github.com/artemv/generator-ruby-starter-kit.git"
   },
   "dependencies": {
-    "chalk": "1.1.1",
+    "chalk": "1.1.2",
     "glob": "7.0.3",
     "yeoman-generator": "0.22.5",
     "yeoman-assert": "2.1.1",
