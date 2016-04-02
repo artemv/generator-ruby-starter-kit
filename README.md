@@ -1,4 +1,7 @@
 # generator-ruby-starter-kit
+
+[![NPM info][nodei.co]][npm-url]
+
 [![Code Climate](https://codeclimate.com/github/artemv/generator-ruby-starter-kit/badges/gpa.svg)](https://codeclimate.com/github/artemv/generator-ruby-starter-kit)
 [![Travis build status](http://img.shields.io/travis/artemv/generator-ruby-starter-kit.svg?style=flat)](https://travis-ci.org/artemv/generator-ruby-starter-kit)
 [![Dependency Status](https://david-dm.org/artemv/generator-ruby-starter-kit.svg)](https://david-dm.org/artemv/generator-ruby-starter-kit)
@@ -33,3 +36,5 @@ guard
 It will run rubocop on start, will run rubocop inspections on changed files and will re-run all RSpecs and rubocop
 inspections if you hit Enter in guard window.
 
+[nodei.co]: https://nodei.co/npm/generator-ruby-starter-kit.png?downloads=true
+[npm-url]: https://npmjs.org/package/generator-ruby-starter-kit
