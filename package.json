@@ -28,7 +28,7 @@
     "yeoman-generator": "0.22.5",
     "yeoman-assert": "2.1.2",
     "yeoman-test": "1.1.0",
-    "yosay": "1.1.0"
+    "yosay": "1.1.1"
   },
   "devDependencies": {
     "mocha": "2.4.5",
