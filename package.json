@@ -29,7 +29,7 @@
     "yeoman-assert": "2.1.2",
     "yeoman-test": "1.1.0",
     "yosay": "1.1.1",
-    "@artemv/ruby-starter-kit": "1.0.8"
+    "@artemv/ruby-starter-kit": "1.0.9"
   },
   "devDependencies": {
     "mocha": "2.4.5",
