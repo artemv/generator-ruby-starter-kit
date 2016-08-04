@@ -32,7 +32,7 @@
     "@artemv/ruby-starter-kit": "1.0.11"
   },
   "devDependencies": {
-    "mocha": "2.5.3",
+    "mocha": "3.0.1",
     "@semantic-release/commit-analyzer": "github:artemv/commit-analyzer#414c9e8168518e00d5fd2bd0d653867404c994cb",
     "semantic-release": "4.3.5"
   },
