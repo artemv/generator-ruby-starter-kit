@@ -28,7 +28,7 @@
     "yeoman-generator": "0.23.3",
     "yeoman-assert": "2.2.1",
     "yeoman-test": "1.5.0",
-    "yosay": "1.2.0",
+    "yosay": "1.2.1",
     "@artemv/ruby-starter-kit": "1.0.11"
   },
   "devDependencies": {
