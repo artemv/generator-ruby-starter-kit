@@ -34,7 +34,7 @@
   "devDependencies": {
     "mocha": "3.1.1",
     "@semantic-release/commit-analyzer": "github:artemv/commit-analyzer#414c9e8168518e00d5fd2bd0d653867404c994cb",
-    "semantic-release": "4.3.5"
+    "semantic-release": "6.3.2"
   },
   "release": {
     "analyzeCommits": "./node_modules/@semantic-release/commit-analyzer/dist/index.js"
