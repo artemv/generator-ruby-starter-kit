@@ -1,5 +1,7 @@
 # generator-ruby-starter-kit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/artemv/generator-ruby-starter-kit.svg)](https://greenkeeper.io/)
+
 [![NPM info][nodei.co]][npm-url]
 
 [![Code Climate](https://codeclimate.com/github/artemv/generator-ruby-starter-kit/badges/gpa.svg)](https://codeclimate.com/github/artemv/generator-ruby-starter-kit)
